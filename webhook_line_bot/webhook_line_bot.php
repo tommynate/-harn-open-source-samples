@@ -2,6 +2,17 @@
 require 'sendMessage.php'; // ฟังก์ชันส่งข้อความไป LINE
 require 'con_mysql.php';    // การเชื่อมต่อฐานข้อมูล MySQL
 
+
+//ขั้นตอนทีต้องทำก่อนแก้ไฟล์คือ
+// 1. กดเข้าไปที่ LINE Developers
+// 2. เลือกเมนู "LINE Messaging API"
+// 3. เลือกเมนู "Webhook"
+// 4. เลือก "เปิด Webhook"
+// 5. ใส่ URL ของเว็บไซต์ที่เราตั้งค่าในไฟล์ webhook_line_bot.php
+// 6. กด "เปิด Webhook"
+// 7. verify token และนำมาใส่ในกาตั้งค่าไฟล์ sendMessage.php
+
+
 // อ่านข้อมูลจาก LINE
 $inputData = file_get_contents('php://input');
 $events = json_decode($inputData, true)['events'] ?? [];
