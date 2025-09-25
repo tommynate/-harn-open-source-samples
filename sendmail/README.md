@@ -21,7 +21,6 @@ sendmail/
 ├── LICENSE                 # License ของโค้ดที่ผู้พัฒนา (MIT License)
 └── .gitattributes
 ```
-
 ---
 
 ## วิธีการใช้งาน
